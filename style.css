@@ -1,0 +1,277 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:    #1A6FA8;
+  --blue-dk: #135a8a;
+  --green:   #2EAA6E;
+  --gray-50: #f8fafc;
+  --gray-100:#f1f5f9;
+  --gray-400:#94a3b8;
+  --gray-600:#475569;
+  --gray-800:#1e293b;
+  --white:   #ffffff;
+  --radius:  12px;
+  --shadow:  0 4px 24px rgba(0,0,0,.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--gray-800);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ===== Utilities ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
+}
+.btn-primary:hover { background: var(--blue-dk); border-color: var(--blue-dk); }
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.btn-outline:hover { background: var(--blue); color: var(--white); }
+.btn-lg { padding: 16px 36px; font-size: 17px; border-radius: 10px; }
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-100);
+  backdrop-filter: blur(8px);
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue);
+  text-decoration: none;
+  letter-spacing: .04em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--gray-600);
+  font-weight: 500;
+  font-size: 15px;
+  transition: color .2s;
+}
+.nav-links a:not(.btn):hover { color: var(--blue); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gray-800);
+  border-radius: 2px;
+  transition: all .25s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #e8f4fd 0%, #edf9f3 100%);
+  padding: 96px 0 80px;
+  text-align: center;
+}
+.hero-content { max-width: 760px; margin: 0 auto; }
+
+.badge {
+  display: inline-block;
+  background: var(--white);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid #c5dff0;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* ===== Sections ===== */
+.section { padding: 80px 0; }
+.section-light { background: var(--gray-50); }
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+.section-header h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.section-header p {
+  color: var(--gray-600);
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+/* ===== Cards ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.12);
+}
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card p {
+  color: var(--gray-600);
+  font-size: 15px;
+}
+
+/* ===== CTA Section ===== */
+.section-cta {
+  background: linear-gradient(135deg, var(--blue) 0%, #0d4f7a 100%);
+  color: var(--white);
+}
+.cta-content {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.cta-content h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.cta-content p {
+  font-size: 17px;
+  opacity: .9;
+  margin-bottom: 36px;
+}
+.cta-content .btn-primary {
+  background: var(--white);
+  color: var(--blue);
+  border-color: var(--white);
+}
+.cta-content .btn-primary:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-100);
+}
+.cta-note {
+  margin-top: 20px !important;
+  font-size: 14px !important;
+  opacity: .7;
+  margin-bottom: 0 !important;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--gray-800);
+  color: var(--gray-400);
+  padding: 48px 0;
+  text-align: center;
+}
+.footer-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.footer .logo { color: var(--white); font-size: 20px; }
+.footer p { font-size: 14px; }
+.footer-contact a { color: var(--gray-400); text-decoration: underline; }
+.footer-contact a:hover { color: var(--white); }
+.footer-copy { margin-top: 8px; font-size: 13px; opacity: .6; }
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-100);
+    padding: 16px 24px 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a:not(.btn) { padding: 12px 0; border-bottom: 1px solid var(--gray-100); }
+  .nav-links .btn { margin-top: 12px; text-align: center; }
+
+  .hero { padding: 64px 0 56px; }
+  .section { padding: 56px 0; }
+}
