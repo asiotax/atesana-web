@@ -256,25 +256,27 @@
     }
     type();
 
-    // Counter animation
+    // Counter animation — se repite cada vez que entra en pantalla
+    const counterTimers = new Map();
     const counterObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (!e.isIntersecting) return;
         const el = e.target;
         if (el.dataset.static) return;
+        if (counterTimers.has(el)) { clearInterval(counterTimers.get(el)); counterTimers.delete(el); }
+        if (!e.isIntersecting) {
+          el.textContent = '0' + (el.dataset.suffix || '');
+          return;
+        }
         const target = +el.dataset.target;
         const suffix = el.dataset.suffix || '';
         let current = 0;
-        const duration = 1600;
-        const steps = 60;
-        const step = target / steps;
-        const interval = duration / steps;
+        const step = target / 60;
         const timer = setInterval(() => {
           current = Math.min(current + step, target);
           el.textContent = Math.round(current).toLocaleString('es-ES') + suffix;
-          if (current >= target) clearInterval(timer);
-        }, interval);
-        counterObserver.unobserve(el);
+          if (current >= target) { clearInterval(timer); counterTimers.delete(el); }
+        }, 1600 / 60);
+        counterTimers.set(el, timer);
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
