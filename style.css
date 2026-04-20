@@ -204,9 +204,9 @@ body {
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(10,4,6,.85) 0%,
-    rgba(10,4,6,.70) 50%,
-    rgba(10,4,6,.92) 100%
+    rgba(10,4,6,.60) 0%,
+    rgba(10,4,6,.40) 50%,
+    rgba(10,4,6,.70) 100%
   );
 }
 
