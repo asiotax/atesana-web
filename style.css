@@ -2,9 +2,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --blue:      #0057FF;
-  --blue-lt:   #00C2FF;
-  --blue-dk:   #003FCC;
+  --blue:      #C1121F;
+  --blue-lt:   #FF4558;
+  --blue-dk:   #96000D;
   --black:     #060810;
   --gray-50:   #F7F8FC;
   --gray-100:  #EDEEF4;
@@ -182,7 +182,7 @@ body {
   justify-content: center;
   overflow: hidden;
   text-align: center;
-  background: #050a1a; /* fallback si el vídeo no carga */
+  background: #0d0405; /* fallback si el vídeo no carga */
 }
 
 /* Video background */
@@ -204,9 +204,9 @@ body {
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(4,6,20,.82) 0%,
-    rgba(4,6,20,.68) 50%,
-    rgba(4,6,20,.90) 100%
+    rgba(10,4,6,.85) 0%,
+    rgba(10,4,6,.70) 50%,
+    rgba(10,4,6,.92) 100%
   );
 }
 
@@ -440,7 +440,7 @@ body {
 }
 .card-icon {
   width: 56px; height: 56px;
-  background: linear-gradient(135deg, #EEF3FF, #DCE9FF);
+  background: linear-gradient(135deg, #FCEEF0, #F9D6D9);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -472,7 +472,7 @@ body {
   position: absolute;
   width: 800px; height: 800px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,87,255,.25), transparent 65%);
+  background: radial-gradient(circle, rgba(193,18,31,.3), transparent 65%);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   filter: blur(40px);
