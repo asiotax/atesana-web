@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atesana — Asociación de Tecnologías Sanitarias de Navarra. Impulsamos la innovación tecnológica en el sector salud de Navarra." />
+  <title>Atesana — Tecnologías Sanitarias de Navarra</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo">ATESANA</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#afiliacion" class="btn btn-outline">Únete</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge">Navarra · Tecnología · Salud</span>
+      <h1>Impulsamos la innovación<br />en tecnología sanitaria</h1>
+      <p class="hero-sub">
+        Atesana es la asociación de referencia en Navarra para empresas y profesionales
+        que trabajan en la intersección entre tecnología y salud. Juntos, tenemos más voz.
+      </p>
+      <a href="#afiliacion" class="btn btn-primary btn-lg">Solicitar afiliación</a>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="section section-light" id="quienes-somos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Quiénes somos</h2>
+        <p>
+          Atesana nace para dar voz y estructura al ecosistema de tecnología sanitaria
+          en Navarra. Somos una asociación independiente formada por empresas,
+          startups, profesionales e instituciones que comparten el objetivo de mejorar
+          la salud a través de la innovación tecnológica.
+        </p>
+        <p>
+          Nuestra misión es conectar, representar y potenciar a todos los actores
+          del sector, facilitando la colaboración público-privada y posicionando a Navarra
+          como referente en healthtech a nivel nacional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Qué ganas al asociarte?</h2>
+        <p>Pertenecer a Atesana te da acceso a una red activa y a recursos concretos.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Networking de calidad</h3>
+          <p>Conecta con empresas, inversores, clínicas e instituciones del sector sanitario navarro y nacional.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📣</div>
+          <h3>Representación sectorial</h3>
+          <p>Atesana habla en tu nombre ante la administración y en foros relevantes de políticas de salud digital.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Conocimiento y recursos</h3>
+          <p>Acceso a informes, formaciones, financiación disponible y oportunidades de colaboración en proyectos.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Eventos y visibilidad</h3>
+          <p>Participa en jornadas, demos y eventos donde dar a conocer tus proyectos e iniciativas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFILIACIÓN CTA -->
+  <section class="section section-cta" id="afiliacion">
+    <div class="container cta-content">
+      <h2>Sé parte del cambio</h2>
+      <p>
+        Estamos en fase de constitución y buscamos a los miembros fundadores de Atesana.
+        Si tu empresa o actividad profesional tiene relación con la tecnología aplicada
+        a la salud, este es tu sitio.
+      </p>
+      <a
+        href="TU_ENLACE_GOOGLE_FORM_AQUI"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary btn-lg"
+      >
+        Solicitar afiliación
+      </a>
+      <p class="cta-note">El proceso es gratuito. Te contactamos en menos de 48 horas.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">ATESANA</span>
+      <p>Asociación de Tecnologías Sanitarias de Navarra</p>
+      <p class="footer-contact">
+        Contacto: <a href="mailto:info@atesana.com">info@atesana.com</a>
+      </p>
+      <p class="footer-copy">© 2026 Atesana. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
