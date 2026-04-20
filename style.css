@@ -221,11 +221,11 @@ body {
 .hero-ecg-line svg { width: 100%; height: 100%; }
 .ecg-line {
   fill: none;
-  stroke: #00C2FF;
+  stroke: #FF4558;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  filter: drop-shadow(0 0 6px rgba(0,194,255,.8));
+  filter: drop-shadow(0 0 6px rgba(255,69,88,.8));
 }
 
 /* Hero content */
@@ -259,14 +259,14 @@ body {
 .hero-title .line { display: block; }
 .hero-title em {
   font-style: normal;
-  background: linear-gradient(90deg, #00C2FF, #0057FF);
+  background: linear-gradient(90deg, #FF4558, #C1121F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .cursor {
   display: inline-block;
-  color: #00C2FF;
+  color: #FF4558;
   animation: blink .7s step-end infinite;
   font-weight: 300;
 }
