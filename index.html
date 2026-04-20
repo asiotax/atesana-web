@@ -55,8 +55,8 @@
         <span class="line">la salud.</span>
       </h1>
       <p class="hero-sub">
-        Somos la asociación que impulsa el ecosistema de innovación en ingeniería biomédica
-        y tecnologías sanitarias de Navarra.
+        Somos la asociación que representa, conecta y articula el sector de la ingeniería
+        biomédica y las tecnologías sanitarias en Navarra.
       </p>
       <div class="hero-ctas">
         <a href="#afiliacion" class="btn btn-primary">Hazte socio</a>
@@ -66,22 +66,49 @@
 
   </section>
 
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Ingeniería Biomédica</span><span class="ticker-dot">·</span>
+      <span>Dispositivos Médicos</span><span class="ticker-dot">·</span>
+      <span>Medicina Personalizada</span><span class="ticker-dot">·</span>
+      <span>Diagnóstico Digital</span><span class="ticker-dot">·</span>
+      <span>Robótica Médica</span><span class="ticker-dot">·</span>
+      <span>IA en Salud</span><span class="ticker-dot">·</span>
+      <span>Transferencia Tecnológica</span><span class="ticker-dot">·</span>
+      <span>I+D+i Sanitario</span><span class="ticker-dot">·</span>
+      <span>Telemedicina</span><span class="ticker-dot">·</span>
+      <span>Biotecnología</span><span class="ticker-dot">·</span>
+      <!-- duplicado para loop continuo -->
+      <span>Ingeniería Biomédica</span><span class="ticker-dot">·</span>
+      <span>Dispositivos Médicos</span><span class="ticker-dot">·</span>
+      <span>Medicina Personalizada</span><span class="ticker-dot">·</span>
+      <span>Diagnóstico Digital</span><span class="ticker-dot">·</span>
+      <span>Robótica Médica</span><span class="ticker-dot">·</span>
+      <span>IA en Salud</span><span class="ticker-dot">·</span>
+      <span>Transferencia Tecnológica</span><span class="ticker-dot">·</span>
+      <span>I+D+i Sanitario</span><span class="ticker-dot">·</span>
+      <span>Telemedicina</span><span class="ticker-dot">·</span>
+      <span>Biotecnología</span><span class="ticker-dot">·</span>
+    </div>
+  </div>
+
   <!-- STATS -->
   <section class="stats">
     <div class="container stats-inner">
       <div class="stat reveal">
-        <span class="stat-num" data-target="4" data-suffix="">0</span>
-        <span class="stat-label">Ejes estratégicos de actividad</span>
+        <span class="stat-num" data-target="80" data-suffix="+">0</span>
+        <span class="stat-label">Entidades del ecosistema biosanitario en Navarra</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat reveal reveal-delay-1">
-        <span class="stat-num" data-static="true">1ª</span>
-        <span class="stat-label">Asociación de tecnología sanitaria en Navarra</span>
+        <span class="stat-num" data-target="31000" data-suffix="+">0</span>
+        <span class="stat-label">Profesionales del sector salud en Navarra</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat reveal reveal-delay-2">
-        <span class="stat-num" data-static="true">∞</span>
-        <span class="stat-label">Potencial de impacto en salud</span>
+        <span class="stat-num" data-target="11" data-suffix="%">0</span>
+        <span class="stat-label">Del PIB navarro representa el sector salud</span>
       </div>
     </div>
   </section>
@@ -97,15 +124,15 @@
       </h2>
       <div class="mision-cols">
         <p class="reveal">
-          Atesana nace para estructurar y dar voz al sector de las tecnologías sanitarias
-          en la Comunidad Foral de Navarra. Reunimos hospitales, centros de investigación,
-          universidades, administraciones, pymes y spin-offs con un objetivo común:
-          mejorar la salud a través de la innovación tecnológica.
+          Atesana nace para articular y dar voz al colectivo de profesionales de la
+          ingeniería biomédica y las tecnologías sanitarias en la Comunidad Foral de Navarra.
+          Agrupamos a ingenieros, investigadores, clínicos y estudiantes con un objetivo
+          común: impulsar la innovación que mejora la salud de las personas.
         </p>
         <p class="reveal reveal-delay-1">
-          Alineamos las capacidades locales con la estrategia S4 de Navarra, facilitamos
-          la colaboración público-privada y posicionamos a Navarra como referente nacional
-          en ingeniería biomédica y salud digital.
+          Trabajamos para conectar el talento navarro con las oportunidades del sector,
+          alineando nuestras capacidades con la estrategia S4 de Navarra y posicionando
+          la ingeniería biomédica navarra como referente a nivel nacional.
         </p>
       </div>
     </div>
@@ -155,12 +182,12 @@
   <section class="cta-section" id="afiliacion">
     <div class="cta-deco"><div class="cta-blob"></div></div>
     <div class="container cta-inner reveal">
-      <span class="eyebrow eyebrow-white">Miembros fundadores</span>
+      <span class="eyebrow eyebrow-white">Únete a Atesana</span>
       <h2>Sé parte<br />del ecosistema.</h2>
       <p>
-        Estamos en fase de constitución y buscamos a los socios fundadores de Atesana.
-        Si eres profesional, investigador o estudiante del sector medtech en Navarra,
-        este es tu sitio.
+        Estamos buscando a los primeros miembros de Atesana. Si eres profesional,
+        investigador o estudiante de ingeniería biomédica o tecnologías sanitarias
+        en Navarra, tu sitio está aquí.
       </p>
       <a href="TU_ENLACE_GOOGLE_FORM_AQUI" target="_blank" rel="noopener noreferrer" class="btn btn-white">
         Hazte socio →
@@ -238,12 +265,15 @@
         const target = +el.dataset.target;
         const suffix = el.dataset.suffix || '';
         let current = 0;
-        const step = Math.ceil(target / 60);
+        const duration = 1600;
+        const steps = 60;
+        const step = target / steps;
+        const interval = duration / steps;
         const timer = setInterval(() => {
           current = Math.min(current + step, target);
-          el.textContent = current + suffix;
+          el.textContent = Math.round(current).toLocaleString('es-ES') + suffix;
           if (current >= target) clearInterval(timer);
-        }, 24);
+        }, interval);
         counterObserver.unobserve(el);
       });
     }, { threshold: 0.5 });
