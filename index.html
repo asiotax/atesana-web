@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Atesana — Asociación de Tecnologías Sanitarias de Navarra. Impulsamos la innovación tecnológica en el sector salud de Navarra." />
+  <meta name="description" content="Atesana — Asociación de Tecnologías Sanitarias de Navarra. Impulsamos la innovación tecnológica en el sector salud." />
   <title>Atesana — Tecnologías Sanitarias de Navarra</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#" class="logo">ATESANA</a>
       <nav class="nav-links" id="navLinks">
-        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#mision">Misión</a>
         <a href="#beneficios">Beneficios</a>
-        <a href="#afiliacion" class="btn btn-outline">Únete</a>
+        <a href="#afiliacion" class="btn-nav">Únete →</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
@@ -29,62 +29,118 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-content">
-      <span class="badge">Navarra · Tecnología · Salud</span>
-      <h1>Impulsamos la innovación<br />en tecnología sanitaria</h1>
-      <p class="hero-sub">
-        Atesana es la asociación de referencia en Navarra para empresas y profesionales
-        que trabajan en la intersección entre tecnología y salud. Juntos, tenemos más voz.
-      </p>
-      <a href="#afiliacion" class="btn btn-primary btn-lg">Solicitar afiliación</a>
+    <div class="hero-deco">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="geo geo-ring"></div>
+      <div class="geo geo-dots"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <span class="eyebrow">Navarra · Healthtech · Innovación</span>
+        <h1>La salud<br />del futuro<br /><em>empieza aquí.</em></h1>
+        <p class="hero-sub">
+          Atesana conecta empresas, profesionales e instituciones que están transformando
+          la sanidad desde Navarra. Somos la voz del sector.
+        </p>
+        <div class="hero-ctas">
+          <a href="#afiliacion" class="btn btn-primary">Solicitar afiliación</a>
+          <a href="#mision" class="btn btn-ghost">Conocer más ↓</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay">
+        <div class="visual-card vc-1">
+          <span class="vc-label">Miembros fundadores</span>
+          <span class="vc-value">Sé el primero</span>
+        </div>
+        <div class="visual-card vc-2">
+          <span class="vc-label">Sector</span>
+          <span class="vc-value">Healthtech</span>
+        </div>
+        <div class="visual-card vc-3">
+          <span class="vc-label">Ámbito</span>
+          <span class="vc-value">Navarra → Nacional</span>
+        </div>
+        <div class="visual-circle"></div>
+      </div>
     </div>
   </section>
 
-  <!-- QUIÉNES SOMOS -->
-  <section class="section section-light" id="quienes-somos">
-    <div class="container">
-      <div class="section-header">
-        <h2>Quiénes somos</h2>
-        <p>
-          Atesana nace para dar voz y estructura al ecosistema de tecnología sanitaria
-          en Navarra. Somos una asociación independiente formada por empresas,
-          startups, profesionales e instituciones que comparten el objetivo de mejorar
-          la salud a través de la innovación tecnológica.
+  <!-- STATS -->
+  <section class="stats reveal">
+    <div class="container stats-inner">
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Independiente</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">1ª</span>
+        <span class="stat-label">Asociación healthtech en Navarra</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Potencial de impacto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN -->
+  <section class="mision" id="mision">
+    <div class="container mision-inner">
+      <div class="mision-tag reveal">Quiénes somos</div>
+      <h2 class="mision-title reveal">
+        Somos el ecosistema<br />que Navarra necesitaba<br />
+        <span class="gradient-text">en tecnología sanitaria.</span>
+      </h2>
+      <div class="mision-cols">
+        <p class="reveal">
+          Atesana nace para dar estructura y voz al sector de la tecnología sanitaria en Navarra.
+          Una asociación independiente que reúne a empresas, startups, clínicas y profesionales
+          con un objetivo común: mejorar la salud a través de la innovación.
         </p>
-        <p>
-          Nuestra misión es conectar, representar y potenciar a todos los actores
-          del sector, facilitando la colaboración público-privada y posicionando a Navarra
-          como referente en healthtech a nivel nacional.
+        <p class="reveal reveal-delay">
+          Facilitamos la colaboración público-privada, representamos al sector ante las
+          instituciones y posicionamos a Navarra como referente nacional en healthtech.
         </p>
       </div>
     </div>
   </section>
 
   <!-- BENEFICIOS -->
-  <section class="section" id="beneficios">
+  <section class="beneficios" id="beneficios">
     <div class="container">
-      <div class="section-header">
-        <h2>¿Qué ganas al asociarte?</h2>
-        <p>Pertenecer a Atesana te da acceso a una red activa y a recursos concretos.</p>
+      <div class="section-head reveal">
+        <span class="eyebrow">Por qué asociarte</span>
+        <h2>Todo lo que ganas<br />al unirte a Atesana.</h2>
       </div>
-      <div class="cards">
+      <div class="cards reveal">
         <div class="card">
-          <div class="card-icon">🤝</div>
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h3>Networking de calidad</h3>
           <p>Conecta con empresas, inversores, clínicas e instituciones del sector sanitario navarro y nacional.</p>
         </div>
         <div class="card">
-          <div class="card-icon">📣</div>
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
           <h3>Representación sectorial</h3>
-          <p>Atesana habla en tu nombre ante la administración y en foros relevantes de políticas de salud digital.</p>
+          <p>Atesana habla en tu nombre ante la administración y en foros de políticas de salud digital.</p>
         </div>
         <div class="card">
-          <div class="card-icon">📚</div>
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
           <h3>Conocimiento y recursos</h3>
-          <p>Acceso a informes, formaciones, financiación disponible y oportunidades de colaboración en proyectos.</p>
+          <p>Acceso a informes, formaciones, financiación disponible y oportunidades de colaboración.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🎯</div>
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
           <h3>Eventos y visibilidad</h3>
           <p>Participa en jornadas, demos y eventos donde dar a conocer tus proyectos e iniciativas.</p>
         </div>
@@ -92,40 +148,47 @@
     </div>
   </section>
 
-  <!-- AFILIACIÓN CTA -->
-  <section class="section section-cta" id="afiliacion">
-    <div class="container cta-content">
-      <h2>Sé parte del cambio</h2>
+  <!-- CTA -->
+  <section class="cta-section" id="afiliacion">
+    <div class="cta-deco">
+      <div class="cta-blob"></div>
+    </div>
+    <div class="container cta-inner reveal">
+      <span class="eyebrow eyebrow-white">Miembros fundadores</span>
+      <h2>Sé parte de algo<br />que importa.</h2>
       <p>
-        Estamos en fase de constitución y buscamos a los miembros fundadores de Atesana.
-        Si tu empresa o actividad profesional tiene relación con la tecnología aplicada
-        a la salud, este es tu sitio.
+        Estamos construyendo la asociación desde cero y buscamos a los miembros fundadores.
+        Si tu actividad tiene relación con la tecnología y la salud, este es tu momento.
       </p>
       <a
         href="TU_ENLACE_GOOGLE_FORM_AQUI"
         target="_blank"
         rel="noopener noreferrer"
-        class="btn btn-primary btn-lg"
+        class="btn btn-white"
       >
-        Solicitar afiliación
+        Solicitar afiliación →
       </a>
-      <p class="cta-note">El proceso es gratuito. Te contactamos en menos de 48 horas.</p>
+      <p class="cta-note">Proceso gratuito · Respuesta en menos de 48h</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="logo">ATESANA</span>
-      <p>Asociación de Tecnologías Sanitarias de Navarra</p>
-      <p class="footer-contact">
-        Contacto: <a href="mailto:info@atesana.com">info@atesana.com</a>
-      </p>
+      <span class="logo footer-logo">ATESANA</span>
+      <p>Asociación de Tecnologías Sanitarias de Navarra · <a href="mailto:info@atesana.com">info@atesana.com</a></p>
       <p class="footer-copy">© 2026 Atesana. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Hamburger
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => {
@@ -138,6 +201,12 @@
         hamburger.classList.remove('active');
       });
     });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
 </body>
