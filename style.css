@@ -114,6 +114,12 @@ body {
   transition: background .3s;
 }
 .navbar.scrolled .logo-symbol { background: rgba(0,87,255,.1); }
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 .logo-text {
   display: flex;
   flex-direction: column;
