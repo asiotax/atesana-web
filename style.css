@@ -257,6 +257,11 @@ body {
   gap: 4px;
 }
 .hero-title .line { display: block; }
+.hero-title .line-typewriter {
+  display: block;
+  min-height: 1.05em;
+  white-space: nowrap;
+}
 .hero-title em {
   font-style: normal;
   background: linear-gradient(90deg, #96000D 0%, #C1121F 25%, #FF6B75 50%, #FFB3B8 65%, #C1121F 85%, #96000D 100%);
