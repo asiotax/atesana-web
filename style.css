@@ -12,7 +12,7 @@
   --gray-600:  #545B78;
   --white:     #FFFFFF;
   --radius:    16px;
-  --font-head: 'Montserrat', sans-serif;
+  --font-head: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -117,9 +117,13 @@ body {
 .logo-img {
   height: 48px;
   width: auto;
-  display: block;
   object-fit: contain;
+  transition: opacity .3s;
 }
+.logo-white { display: block; }
+.logo-dark  { display: none; }
+.navbar.scrolled .logo-white { display: none; }
+.navbar.scrolled .logo-dark  { display: block; }
 .logo-text {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,112 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Estilos -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&amp;display=swap');
+
+      .main { stroke:#FFFFFF; 
+        fill:none; 
+        stroke-width:3.5; 
+        stroke-linecap:round; 
+        stroke-linejoin:round;
+      }
+
+      .white  { fill:#FFFFFF; }
+
+      .white-stroke {
+        fill: none;
+        stroke: #FFFFFF;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 190px;
+        font-weight: 300;
+        letter-spacing: 35px;
+        fill: #FFFFFF
+      }
+
+      .title-bold {
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-family: 'Montserrat', sans-serif-regular;
+        font-size: 38px;
+        font-weight: 400;
+        fill: #666666;
+      }
+
+      .bold-gray {
+        font-weight: 700;
+        fill: #666666;
+      }
+
+      .bold-white {
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+    </style>
+  </defs>
+
+  <!-- ICONO -->
+  <g transform="translate(60,325)">
+
+    <!-- Puntos -->
+    <circle cx="6" cy="18" r="18" class="white"/>
+    <circle cx="6" cy="124" r="18" class="white"/>
+    <circle cx="6" cy="230" r="18" class="white"/>
+
+    <circle cx="112" cy="18" r="18" class="white"/>
+    <circle cx="112" cy="230" r="18" class="white"/>
+
+    <circle cx="218" cy="18" r="18" class="white"/>
+    <circle cx="218" cy="124" r="18" class="white"/>
+    <circle cx="218" cy="230" r="18" class="white"/>
+
+    <!-- Líneas -->
+    <line x1="112" y1="18" x2="218" y2="18" class="white-stroke"/>
+    <line x1="218" y1="18" x2="218" y2="124" class="white-stroke"/>
+    <line x1="6" y1="124" x2="6" y2="230" class="white-stroke"/>
+
+      <!-- ECG -->
+    <path class="main"
+      d="M63 135
+      L78 135
+      A 5 8 0 0 1 88 135
+      L98 135
+      L105 150
+      L113 75
+      L121 155
+      L128 135
+      L135 135
+      A 5 7 0 0 1 145 135
+      L160 135"/>
+  </g>
+
+  <!-- Línea vertical -->
+  <rect x="350" y="320" width="6" height="255" fill="#FFFFFF"/>
+
+  <!-- Texto principal -->
+  <text x="400" y="485" class="title">
+    ATESA<tspan class="title-bold">NA</tspan>
+  </text>
+
+  <!-- Subtítulo -->
+  <text x="375" y="550" class="subtitle">
+
+    <tspan dx="10" class="bold-gray">A</tspan>SOCIACIÓN DE
+
+    <tspan dx="10" class="bold-gray">TE</tspan>CNOLOGÍAS
+
+    <tspan dx="10" class="bold-gray">SA</tspan>NITARIAS DE
+
+    <tspan dx="10" class="bold-white">NA</tspan>VARRA
+
+  </text>
+
+</svg>
