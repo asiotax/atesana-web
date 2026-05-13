@@ -115,7 +115,7 @@ body {
 }
 .navbar.scrolled .logo-symbol { background: rgba(0,87,255,.1); }
 .logo-img {
-  height: 48px;
+  height: 72px;
   width: auto;
   object-fit: contain;
   transition: opacity .3s;
