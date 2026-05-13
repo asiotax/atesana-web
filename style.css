@@ -563,7 +563,7 @@ body {
 }
 .linkedin-link:hover { color: var(--white); }
 .linkedin-link-footer { margin-top: 4px; }
-.linkedin-logo-img { width: 20px; height: 20px; object-fit: contain; }
+.linkedin-logo-img { width: 20px; height: 20px; object-fit: contain; display: block; flex-shrink: 0; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
