@@ -188,11 +188,13 @@ body {
   height: 100vh;
   min-height: 600px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
   text-align: center;
   background: #0d0405; /* fallback si el vídeo no carga */
+  padding-top: 136px;  /* navbar + margen superior */
+  padding-bottom: 80px; /* respiro antes del ticker */
 }
 
 /* Video background */
@@ -243,8 +245,8 @@ body {
   position: relative;
   z-index: 4;
   max-width: 860px;
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .hero-eyebrow {
   display: inline-block;
@@ -561,6 +563,7 @@ body {
 }
 .linkedin-link:hover { color: var(--white); }
 .linkedin-link-footer { margin-top: 4px; }
+.linkedin-logo-img { width: 20px; height: 20px; object-fit: contain; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
