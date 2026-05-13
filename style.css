@@ -243,6 +243,7 @@ body {
   position: relative;
   z-index: 4;
   max-width: 860px;
+  padding-bottom: 120px;
   padding-top: 76px;
 }
 .hero-eyebrow {
