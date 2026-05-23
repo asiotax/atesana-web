@@ -1,0 +1,78 @@
+<svg width="560" height="560" viewBox="520 100 560 560" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Estilos -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&amp;display=swap');
+
+      .main {
+        stroke:#8C1D2C;
+        fill:none;
+        stroke-width:3.5;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+      }
+
+      .red { fill:#8C1D2C; }
+
+      .red-stroke {
+        fill: none;
+        stroke: #8c1d2c;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 100px;
+        font-weight: 300;
+        letter-spacing: 10px;
+        fill: #8c1d2c;
+      }
+
+      .title-bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+
+  <!-- ICONO: símbolo de logo_neutro escalado x2.2 y centrado horizontalmente -->
+  <g transform="translate(553,110) scale(2.2)">
+
+    <!-- Puntos -->
+    <circle cx="6"   cy="18"  r="18" class="red"/>
+    <circle cx="6"   cy="124" r="18" class="red"/>
+    <circle cx="6"   cy="230" r="18" class="red"/>
+
+    <circle cx="112" cy="18"  r="18" class="red"/>
+    <circle cx="112" cy="230" r="18" class="red"/>
+
+    <circle cx="218" cy="18"  r="18" class="red"/>
+    <circle cx="218" cy="124" r="18" class="red"/>
+    <circle cx="218" cy="230" r="18" class="red"/>
+
+    <!-- Líneas -->
+    <line x1="112" y1="18"  x2="218" y2="18"  class="red-stroke"/>
+    <line x1="218" y1="18"  x2="218" y2="124" class="red-stroke"/>
+    <line x1="6"   y1="124" x2="6"   y2="230" class="red-stroke"/>
+
+    <!-- ECG -->
+    <path class="main"
+      d="M63 135
+      L78 135
+      A 5 8 0 0 1 88 135
+      L98 135
+      L105 150
+      L113 75
+      L121 155
+      L128 135
+      L135 135
+      A 5 7 0 0 1 145 135
+      L160 135"/>
+  </g>
+
+  <!-- Título ATESANA centrado y con la misma anchura que el símbolo (545.6) -->
+  <text x="525" y="780" class="title" lengthAdjust="spacing">ATESA<tspan class="title-bold">NA</tspan></text>
+
+</svg>

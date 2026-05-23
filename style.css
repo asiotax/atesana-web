@@ -194,7 +194,7 @@ body {
   text-align: center;
   background: #0d0405; /* fallback si el vídeo no carga */
   padding-top: 136px;  /* navbar + margen superior */
-  padding-bottom: 80px; /* respiro antes del ticker */
+  padding-bottom: 120px; /* respiro antes del ticker */
 }
 
 /* Video background */
@@ -259,7 +259,7 @@ body {
 }
 .hero-title {
   font-family: var(--font-head);
-  font-size: clamp(52px, 8vw, 96px);
+  font-size: clamp(40px, 6vw, 72px);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -.03em;
