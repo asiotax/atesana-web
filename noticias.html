@@ -119,11 +119,14 @@
         const isExternal = n.link && (n.link.startsWith('http://') || n.link.startsWith('https://'));
         const leerMasHtml = n.link ? `<span class="news-card-link">Leer más →</span>` : '';
 
-        const article = document.createElement(n.link ? 'a' : 'article');
+        const article = document.createElement('article');
         article.className = `news-card reveal ${delay}`;
         if (n.link) {
-          article.href = n.link;
-          if (isExternal) { article.target = '_blank'; article.rel = 'noopener noreferrer'; }
+          article.style.cursor = 'pointer';
+          article.addEventListener('click', () => {
+            if (isExternal) window.open(n.link, '_blank', 'noopener,noreferrer');
+            else window.location.href = n.link;
+          });
         }
         article.innerHTML = `
           ${imgHtml}

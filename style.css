@@ -695,10 +695,6 @@ body {
 }
 
 /* ===== News card ===== */
-a.news-card {
-  text-decoration: none;
-  color: inherit;
-}
 .news-card {
   background: var(--white);
   border: 1px solid var(--gray-100);
