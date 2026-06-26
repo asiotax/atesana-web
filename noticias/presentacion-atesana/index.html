@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ATESANA se presenta oficialmente en el congreso Salud y Futuro: Innovación y tecnologías que transforman Navarra." />
+  <title>ATESANA se presenta en Salud y Futuro — ATESANA</title>
+  <link rel="icon" type="image/svg+xml" href="../../icono.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    .article-hero-img {
+      display: block;
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: initial;
+      margin: 32px auto 0;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../../index.html" class="logo-wrap">
+        <img src="../../logo_blanco.svg" alt="ATESANA" class="logo-img logo-white" />
+        <img src="../../logo_neutro.svg" alt="ATESANA" class="logo-img logo-dark" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html#mision">Misión</a>
+        <a href="../../index.html#actividades">Actividades</a>
+        <a href="../../noticias.html" class="nav-active">Noticias</a>
+        <a href="../../index.html#afiliacion" class="btn-nav">Únete →</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CABECERA -->
+  <header class="article-header">
+    <div class="container">
+      <a href="../../noticias.html" class="article-back reveal">← Volver a noticias</a>
+      <div class="article-meta reveal">
+        <span class="news-badge">Presentación</span>
+        <span class="article-date">Pamplona-Iruña, 29 de mayo de 2026</span>
+      </div>
+      <h1 class="article-title reveal">ATESANA se presenta oficialmente en el congreso "Salud y Futuro"</h1>
+    </div>
+  </header>
+
+  <img src="atesana%20presentaci%C3%B3n.jpg" alt="Presentación de ATESANA en el congreso Salud y Futuro" class="article-hero-img" />
+
+  <!-- CUERPO -->
+  <main class="article-body">
+    <p class="reveal">
+      El pasado 29 de mayo fue presentada ATESANA en el congreso "Salud y Futuro: Innovación y tecnologías que transforman Navarra", un evento de referencia en el ecosistema biosanitario navarro.
+    </p>
+    <p class="reveal">
+      ATESANA, Asociación de Tecnologías Sanitarias de Navarra, nace con una misión clara: conectar a los profesionales del sector en la comunidad, generando espacios de encuentro que faciliten la colaboración, la transferencia de conocimiento y la identificación de oportunidades en investigación, innovación y desarrollo tecnológico.
+    </p>
+    <blockquote class="reveal">
+      <p>"El ecosistema de las tecnologías sanitarias en Navarra está organizado pero las personas no, y ATESANA nace para romper esa barrera. Queremos crear espacios para generar sinergias y conectar personas."</p>
+    </blockquote>
+    <p class="reveal">
+      La presentación supuso el primer paso oficial de una asociación que busca aglutinar a ingenieros biomédicos, investigadores, empresas MedTech, profesionales sanitarios y estudiantes bajo un mismo paraguas. ATESANA ofrece a sus socios acceso a foros de discusión, hackathons, eventos de networking y vigilancia tecnológica del sector, con el objetivo de que la tecnología tenga un impacto real en la salud y la calidad asistencial.
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="../../logo_blanco.svg" alt="ATESANA" class="footer-logo-img" />
+      <p>Asociación de Tecnologías Sanitarias de Navarra · <a href="mailto:info@atesana.com">info@atesana.com</a></p>
+      <a href="https://www.linkedin.com/company/atesana/" target="_blank" rel="noopener noreferrer" class="linkedin-link linkedin-link-footer">
+        <img src="../../gray.png" alt="LinkedIn" class="linkedin-logo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;flex-shrink:0;" />
+        LinkedIn
+      </a>
+      <p class="footer-copy">© 2026 ATESANA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      if (window.scrollY <= 60) navbar.classList.add('scrolled');
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>

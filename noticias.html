@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ATESANA — Noticias y actividades de la Asociación de Tecnologías Sanitarias de Navarra." />
+  <title>Noticias — ATESANA</title>
+  <link rel="icon" type="image/svg+xml" href="icono.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="logo_blanco.svg" alt="ATESANA" class="logo-img logo-white" />
+        <img src="logo_neutro.svg" alt="ATESANA" class="logo-img logo-dark" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#mision">Misión</a>
+        <a href="index.html#actividades">Actividades</a>
+        <a href="noticias.html" class="nav-active">Noticias</a>
+        <a href="index.html#afiliacion" class="btn-nav">Únete →</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CABECERA DE PÁGINA -->
+  <section class="page-header">
+    <div class="container">
+      <span class="mision-tag reveal">Actividad</span>
+      <h1 class="page-header-title reveal">Noticias</h1>
+    </div>
+  </section>
+
+  <!-- GRID DE NOTICIAS -->
+  <section class="news-section">
+    <div class="container">
+      <div class="news-grid" id="newsGrid"></div>
+      <p class="news-empty" id="newsEmpty" style="display:none;">
+        Próximamente publicaremos las primeras noticias. ¡Síguenos en LinkedIn para estar al día!
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="logo_blanco.svg" alt="ATESANA" class="footer-logo-img" />
+      <p>Asociación de Tecnologías Sanitarias de Navarra · <a href="mailto:info@atesana.com">info@atesana.com</a></p>
+      <a href="https://www.linkedin.com/company/atesana/" target="_blank" rel="noopener noreferrer" class="linkedin-link linkedin-link-footer">
+        <img src="gray.png" alt="LinkedIn" class="linkedin-logo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;flex-shrink:0;" />
+        LinkedIn
+      </a>
+      <p class="footer-copy">© 2026 ATESANA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="noticias.js"></script>
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      if (window.scrollY <= 60) navbar.classList.add('scrolled');
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+
+    // Render noticias
+    const grid = document.getElementById('newsGrid');
+    const empty = document.getElementById('newsEmpty');
+
+    if (!NOTICIAS || NOTICIAS.length === 0) {
+      empty.style.display = 'block';
+    } else {
+      NOTICIAS.forEach((n, i) => {
+        const delay = i % 3 === 1 ? 'reveal-delay-1' : i % 3 === 2 ? 'reveal-delay-2' : '';
+        const dateStr = n.date
+          ? new Date(n.date + 'T12:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' })
+          : '';
+
+        const imgHtml = n.image
+          ? `<div class="news-card-img"><img src="${n.image}" alt="${n.title}" loading="lazy" /></div>`
+          : '';
+        const badgeHtml = n.category
+          ? `<span class="news-badge">${n.category}</span>`
+          : '';
+        const dateHtml = dateStr
+          ? `<time class="news-card-date" datetime="${n.date}">${dateStr}</time>`
+          : '';
+        const summaryHtml = n.summary
+          ? `<p class="news-card-summary">${n.summary}</p>`
+          : '';
+        const isExternal = n.link && (n.link.startsWith('http://') || n.link.startsWith('https://'));
+        const linkHtml = n.link
+          ? `<a href="${n.link}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} class="news-card-link">Leer más →</a>`
+          : '';
+
+        const article = document.createElement('article');
+        article.className = `news-card reveal ${delay}`;
+        article.innerHTML = `
+          ${imgHtml}
+          <div class="news-card-body">
+            ${badgeHtml}
+            <h3 class="news-card-title">${n.title}</h3>
+            ${dateHtml}
+            ${summaryHtml}
+            ${linkHtml}
+          </div>
+        `;
+        grid.appendChild(article);
+      });
+    }
+
+    // Observe all reveal elements (cabecera + cards)
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>
