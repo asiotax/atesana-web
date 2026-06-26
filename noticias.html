@@ -117,12 +117,14 @@
           ? `<p class="news-card-summary">${n.summary}</p>`
           : '';
         const isExternal = n.link && (n.link.startsWith('http://') || n.link.startsWith('https://'));
-        const linkHtml = n.link
-          ? `<a href="${n.link}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} class="news-card-link">Leer más →</a>`
-          : '';
+        const leerMasHtml = n.link ? `<span class="news-card-link">Leer más →</span>` : '';
 
-        const article = document.createElement('article');
+        const article = document.createElement(n.link ? 'a' : 'article');
         article.className = `news-card reveal ${delay}`;
+        if (n.link) {
+          article.href = n.link;
+          if (isExternal) { article.target = '_blank'; article.rel = 'noopener noreferrer'; }
+        }
         article.innerHTML = `
           ${imgHtml}
           <div class="news-card-body">
@@ -130,7 +132,7 @@
             <h3 class="news-card-title">${n.title}</h3>
             ${dateHtml}
             ${summaryHtml}
-            ${linkHtml}
+            ${leerMasHtml}
           </div>
         `;
         grid.appendChild(article);
