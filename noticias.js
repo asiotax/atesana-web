@@ -1,5 +1,13 @@
 const NOTICIAS = [
   {
+    title: 'ATESANA celebra su primer encuentro participativo online',
+    date: '2026-06-24',
+    category: 'Encuentro',
+    summary: 'La semana pasada celebramos el primer encuentro oficial de ATESANA, reuniendo a profesionales del ámbito sanitario, tecnológico y de la innovación. Identificamos barreras clave y una conclusión clara: en Navarra existe talento, conocimiento y voluntad de colaborar.',
+    image: 'noticias/toma-contacto/pizarra.jpeg',
+    link: 'noticias/toma-contacto/'
+  },
+  {
     title: 'ATESANA se presenta en el congreso “Salud y Futuro”',
     date: '2026-05-29',
     category: 'Presentación',

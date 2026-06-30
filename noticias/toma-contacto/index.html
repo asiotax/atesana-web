@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ATESANA celebra su primer encuentro participativo online reuniendo a profesionales del ámbito sanitario, tecnológico y de la innovación." />
+  <title>Primer encuentro participativo — ATESANA</title>
+  <link rel="icon" type="image/svg+xml" href="../../icono.svg" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    .article-hero-img {
+      display: block;
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: initial;
+      margin: 32px auto 0;
+      border-radius: 12px;
+    }
+    .article-hashtags {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: var(--clr-muted, #888);
+      line-height: 1.8;
+    }
+    .article-signature {
+      margin-top: 32px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../../index.html" class="logo-wrap">
+        <img src="../../logo_blanco.svg" alt="ATESANA" class="logo-img logo-white" />
+        <img src="../../logo_neutro.svg" alt="ATESANA" class="logo-img logo-dark" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../index.html#mision">Misión</a>
+        <a href="../../index.html#actividades">Actividades</a>
+        <a href="../../noticias.html" class="nav-active">Noticias</a>
+        <a href="../../index.html#afiliacion" class="btn-nav">Únete →</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CABECERA -->
+  <header class="article-header">
+    <div class="container">
+      <a href="../../noticias.html" class="article-back reveal">← Volver a noticias</a>
+      <div class="article-meta reveal">
+        <span class="news-badge">Encuentro</span>
+        <span class="article-date">Navarra, 24 de junio de 2026</span>
+      </div>
+      <h1 class="article-title reveal">ATESANA celebra su primer encuentro participativo online</h1>
+    </div>
+  </header>
+
+  <img src="pizarra.jpeg" alt="Pizarra del primer encuentro participativo de ATESANA" class="article-hero-img" />
+
+  <!-- CUERPO -->
+  <main class="article-body">
+    <p class="reveal">
+      La semana pasada celebramos el primer encuentro oficial de ATESANA, reuniendo a profesionales del ámbito sanitario, tecnológico y de la innovación con un objetivo común: acercar las necesidades reales de la práctica clínica al talento capaz de desarrollar soluciones.
+    </p>
+    <p class="reveal">
+      Durante la sesión compartimos nuestra visión, presentamos las próximas iniciativas de la asociación y, sobre todo, escuchamos a los asistentes. A través de una dinámica colaborativa identificamos algunas de las principales barreras que frenan la innovación sanitaria: la dificultad para conectar perfiles clínicos y tecnológicos, la falta de espacios de colaboración y los retos para transformar una idea en un proyecto real.
+    </p>
+    <blockquote class="reveal">
+      <p>En Navarra existe talento, conocimiento y voluntad de colaborar. Ahora toca seguir creando los espacios adecuados para que esas conexiones se conviertan en soluciones con impacto.</p>
+    </blockquote>
+    <p class="reveal">
+      Desde ATESANA agradecemos la participación de todas las personas asistentes. Este ha sido solo el primer paso de una comunidad que quiere construir, de forma colaborativa, la tecnología sanitaria que Navarra necesita.
+    </p>
+    <p class="reveal">
+      Seguimos construyendo puentes entre salud y tecnología.
+    </p>
+    <p class="reveal">
+      A la vuelta de verano volveremos con más fuerza y ganas. Mientras tanto seguiremos las rondas de contacto con los diferentes agentes del ecosistema actual, para ver dónde podemos encajar y en qué podemos colaborar. Nuestro correo está abierto para cualquier duda o consulta: <a href="mailto:info@atesana.com">info@atesana.com</a>
+    </p>
+    <p class="reveal">
+      Feliz verano y felices fiestas!
+    </p>
+    <p class="article-signature reveal">El equipo de ATESANA</p>
+    <p class="article-hashtags reveal">
+      #ATESANA #InnovaciónSanitaria #HealthTech #Navarra #SaludDigital #TecnologíaSanitaria
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="../../logo_blanco.svg" alt="ATESANA" class="footer-logo-img" />
+      <p>Asociación de Tecnologías Sanitarias de Navarra · <a href="mailto:info@atesana.com">info@atesana.com</a></p>
+      <a href="https://www.linkedin.com/company/atesana/" target="_blank" rel="noopener noreferrer" class="linkedin-link linkedin-link-footer">
+        <img src="../../gray.png" alt="LinkedIn" class="linkedin-logo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;flex-shrink:0;" />
+        LinkedIn
+      </a>
+      <p class="footer-copy">© 2026 ATESANA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      if (window.scrollY <= 60) navbar.classList.add('scrolled');
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>
