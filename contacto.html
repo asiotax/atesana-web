@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ATESANA — Contacta con la Asociación de Tecnologías Sanitarias de Navarra: consultas, propuestas de colaboración y búsqueda de contactos en el ecosistema." />
+  <title>Contacto — ATESANA</title>
+  <link rel="icon" type="image/svg+xml" href="icono.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="logo_blanco.svg" alt="ATESANA" class="logo-img logo-white" />
+        <img src="logo_neutro.svg" alt="ATESANA" class="logo-img logo-dark" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#mision">Misión</a>
+        <a href="index.html#actividades">Actividades</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html" class="nav-active">Contacto</a>
+        <a href="index.html#afiliacion" class="btn-nav">Únete →</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CABECERA DE PÁGINA -->
+  <section class="page-header">
+    <div class="container">
+      <span class="mision-tag reveal">Hablemos</span>
+      <h1 class="page-header-title reveal">Contacto</h1>
+      <p class="page-header-sub reveal">Cuéntanos qué te trae por aquí. Te responderemos lo antes posible.</p>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="contacto-section">
+    <div class="container">
+      <div class="form-card reveal">
+
+        <form id="contactForm" novalidate="false">
+          <!-- Campos de Web3Forms -->
+          <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI" />
+          <input type="hidden" name="subject" id="formSubject" value="Nuevo contacto web — Consulta" />
+          <input type="hidden" name="from_name" value="Web ATESANA" />
+          <!-- Honeypot antispam: invisible para personas, tentador para bots -->
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+
+          <fieldset class="chips">
+            <legend>¿Sobre qué nos escribes?</legend>
+            <div class="chips-list">
+              <div class="chip">
+                <input type="radio" id="motivo-consulta" name="motivo" value="Consulta" class="sr-only" checked />
+                <label for="motivo-consulta" class="chip-label">Consulta</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="motivo-colaboracion" name="motivo" value="Propuesta de colaboración" class="sr-only" />
+                <label for="motivo-colaboracion" class="chip-label">Propuesta de colaboración</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="motivo-contactos" name="motivo" value="Búsqueda de contactos" class="sr-only" />
+                <label for="motivo-contactos" class="chip-label">Búsqueda de contactos</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="motivo-otro" name="motivo" value="Otro" class="sr-only" />
+                <label for="motivo-otro" class="chip-label">Otro</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="nombre">Nombre y apellidos</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="organizacion">Organización <span class="field-optional">(opcional)</span></label>
+            <input type="text" id="organizacion" name="organizacion" autocomplete="organization" placeholder="Empresa, hospital, universidad…" />
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Tu mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Describe brevemente tu consulta, propuesta o búsqueda."></textarea>
+          </div>
+
+          <div class="field-check">
+            <input type="checkbox" id="privacidad" name="privacidad" value="Acepta la política de privacidad" required />
+            <label for="privacidad">
+              Acepto que ATESANA trate mis datos con la única finalidad de responder a este mensaje.
+              No se cederán a terceros. Puedes ejercer tus derechos de acceso, rectificación y supresión
+              escribiendo a <a href="mailto:info@atesana.com">info@atesana.com</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmit">Enviar mensaje →</button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="form-success" id="formSuccess" hidden>
+          <div class="form-success-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h2>Mensaje enviado</h2>
+          <p>Gracias por escribirnos. Te responderemos a la mayor brevedad al correo que nos has dejado.</p>
+        </div>
+
+      </div>
+
+      <p class="form-alt">
+        ¿Prefieres el correo de siempre? <a href="mailto:info@atesana.com">info@atesana.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="logo_blanco.svg" alt="ATESANA" class="footer-logo-img" />
+      <p>Asociación de Tecnologías Sanitarias de Navarra · <a href="mailto:info@atesana.com">info@atesana.com</a> · <a href="contacto.html">Contacto</a></p>
+      <a href="https://www.linkedin.com/company/atesana/" target="_blank" rel="noopener noreferrer" class="linkedin-link linkedin-link-footer">
+        <img src="gray.png" alt="LinkedIn" class="linkedin-logo-img" width="20" height="20" style="width:20px;height:20px;object-fit:contain;flex-shrink:0;" />
+        LinkedIn
+      </a>
+      <p class="footer-legal">ATESANA es el dominio registrado de la ASOCIACIÓN DE TECNOLOGÍAS SANITARIAS DE NAVARRA, entidad sin ánimo de lucro inscrita en el Registro de Asociaciones con NIF G71560783 e ID 10338 y dirección Calle Alfonso el Batallador, 5 Bis trasera, 31008, Pamplona, Navarra</p>
+      <p class="footer-copy">© 2026 ATESANA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      if (window.scrollY <= 60) navbar.classList.add('scrolled');
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Formulario de contacto
+    const form = document.getElementById('contactForm');
+    const subject = document.getElementById('formSubject');
+    const submitBtn = document.getElementById('formSubmit');
+    const status = document.getElementById('formStatus');
+    const success = document.getElementById('formSuccess');
+
+    // El motivo elegido viaja en el asunto del correo
+    form.querySelectorAll('input[name="motivo"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        subject.value = `Nuevo contacto web — ${radio.value}`;
+      });
+    });
+
+    function showError(msg) {
+      status.className = 'form-status is-error';
+      status.innerHTML = `${msg} Si el problema persiste, escríbenos a <a href="mailto:info@atesana.com">info@atesana.com</a>.`;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.className = 'form-status';
+      status.textContent = '';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando…';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          form.reset();
+          form.hidden = true;
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+        showError('No hemos podido enviar tu mensaje.');
+      } catch (err) {
+        showError('No hemos podido conectar con el servidor.');
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje →';
+    });
+  </script>
+
+</body>
+</html>
