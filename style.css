@@ -924,6 +924,166 @@ body {
 .form-alt a { color: var(--blue); text-decoration: none; font-weight: 600; }
 .form-alt a:hover { text-decoration: underline; }
 
+/* ===== Newsletter (noticias/newsletter-0) ===== */
+.nl-masthead {
+  padding: 100px 0 0;
+  background: var(--white);
+  text-align: center;
+}
+.nl-masthead-img {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  margin: 8px auto 28px;
+  border-radius: 12px;
+}
+.nl-title {
+  font-family: var(--font-head);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+
+.nl-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 44px 32px 100px;
+}
+/* El texto se queda en medida de lectura; las fotos ocupan todo el ancho */
+.nl-body p,
+.nl-body h2,
+.nl-body ul,
+.nl-body blockquote {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nl-body p {
+  font-size: 17px;
+  color: var(--gray-600);
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+.nl-body p strong { color: var(--black); font-weight: 600; }
+.nl-body a { color: var(--blue); font-weight: 600; }
+
+.nl-h2 {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--black);
+  margin: 16px 0 24px;
+}
+.nl-h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 2px;
+  background: var(--blue);
+}
+
+.nl-body blockquote {
+  border-left: 3px solid var(--blue);
+  padding: 2px 0 2px 24px;
+  margin: 36px auto;
+}
+.nl-body blockquote p {
+  font-size: 19px;
+  font-style: italic;
+  color: var(--black);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Preguntas destacadas que puntúan el texto */
+.nl-question {
+  font-family: var(--font-head);
+  font-size: 19px !important;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--blue) !important;
+  line-height: 1.5 !important;
+  padding-left: 20px;
+  border-left: 2px solid var(--gray-100);
+}
+
+.nl-questions { list-style: none; margin-bottom: 28px; }
+.nl-questions li {
+  position: relative;
+  font-size: 17px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  padding: 12px 0 12px 32px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.nl-questions li::before {
+  content: "→";
+  position: absolute;
+  left: 4px;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* Fotos a ancho completo, en blanco y negro como en el original */
+.nl-figure { margin: 48px 0 36px; }
+.nl-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+/* Franjas de cierre (eran PNG en el Canva, aquí son texto real) */
+.nl-band {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 32px;
+  text-align: center;
+  border-radius: 14px;
+}
+.nl-band p {
+  margin: 0 !important;
+  max-width: none;
+  font-family: var(--font-head);
+  font-size: clamp(19px, 2.4vw, 26px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.nl-band-soft { background: #FCDEE2; margin-top: 56px; }
+.nl-band-soft p { color: var(--blue-dk) !important; }
+.nl-band-strong { background: var(--blue); margin-top: 12px; }
+.nl-band-strong p { color: var(--white) !important; }
+
+.nl-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 28px;
+  margin-top: 44px;
+}
+.nl-contact a {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color .2s;
+}
+.nl-contact a:hover { color: var(--blue); }
+
+.article-signature {
+  font-family: var(--font-head);
+  font-weight: 600;
+  color: var(--black) !important;
+  text-align: center;
+  margin-top: 32px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .mision-cols { gap: 20px; }
@@ -957,4 +1117,9 @@ body {
   .form-card { padding: 32px 24px; }
   .field-row { grid-template-columns: 1fr; gap: 20px; }
   .chip-label { font-size: 13px; padding: 9px 16px; }
+  .nl-masthead { padding: 108px 0 0; }
+  .nl-body { padding: 32px 20px 70px; }
+  .nl-figure { margin: 36px 0 28px; }
+  .nl-band { padding: 24px 20px; border-radius: 12px; }
+  .nl-contact { gap: 8px 18px; }
 }

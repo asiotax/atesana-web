@@ -1,5 +1,13 @@
 const NOTICIAS = [
   {
+    title: 'Newsletter 0: así arranca ATESANA',
+    date: '2026-09-30',
+    category: 'Newsletter',
+    summary: 'Publicamos el número cero de nuestra newsletter: la visión con la que nace ATESANA, en qué punto está el proyecto tras los primeros meses de contactos con el ecosistema navarro, y cómo participar. Las siguientes serán más temáticas, contando proyectos reales de tecnología sanitaria en Navarra.',
+    image: 'noticias/newsletter-0/laboratorio.jpg',
+    link: 'noticias/newsletter-0/'
+  },
+  {
     title: 'ATESANA celebra su primer encuentro participativo online',
     date: '2026-06-24',
     category: 'Encuentro',
