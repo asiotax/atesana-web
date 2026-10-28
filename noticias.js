@@ -1,7 +1,7 @@
 const NOTICIAS = [
   {
     title: 'Newsletter 1: del quirófano al laboratorio, ¿cómo se construye una prótesis?',
-    date: '2026-10-31',
+    date: '2026-10-29',
     category: 'Newsletter',
     summary: 'El primer número temático recorre los cinco pasos que llevan de una necesidad clínica a una prótesis, repasa lo que ya se está haciendo en Navarra —del modelo 3D de aorta del CHN a la cirugía robótica de la CUN— y cuenta el caso de BIOAIR, un stent traqueal biodegradable e impreso en 3D coordinado por la UPNA.',
     image: 'noticias/newsletter-1/bioair.jpg',
